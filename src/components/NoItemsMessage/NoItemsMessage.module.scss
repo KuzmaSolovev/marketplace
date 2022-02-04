@@ -1,0 +1,28 @@
+@import '@styles/variables.scss';
+
+.messageWrapper {
+  display: grid;
+  text-align: center;
+  justify-self: center;
+  max-width: 300px;
+  align-self: center;
+  margin-top: 32px;
+
+  .messageTitle {
+    font-size: 16px;
+    color: $dark;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .messageText {
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .messageButton {
+    width: fit-content;
+  }
+}

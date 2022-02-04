@@ -1,0 +1,112 @@
+@import '@styles/variables';
+
+@mixin fieldset {
+  display: grid;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-content: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  height: 80px;
+
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  &.error > input {
+    border-color: red !important;
+  }
+
+  & > label {
+    font-size: 14px;
+    line-height: 16px;
+    color: $dark;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+
+  & > input,
+  textarea {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    box-sizing: border-box;
+    border: 2px solid $athens-grey2;
+    border-radius: 4px;
+    background: transparent;
+    padding: 16px 8px 16px 16px;
+    color: $gray;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 50000s ease-in-out 0s;
+    background-color: transparent !important;
+    -webkit-text-fill-color: $dark;
+  }
+
+  & span {
+    height: 16px;
+    color: red;
+    font-size: 12px;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  & > textarea {
+    max-width: unset;
+    box-sizing: border-box;
+    border: 2px solid $athens-grey2;
+    border-radius: 4px;
+    background: transparent;
+    padding: 16px 8px 16px 16px;
+    overflow: auto;
+    box-shadow: none;
+    color: $dark;
+    -webkit-appearance: none;
+
+    resize: none;
+
+    /*&:focus {
+      outline: none;
+      border: none;
+    }*/
+
+    & > input,
+    textarea {
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      &:-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      &::-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & span {
+      font-size: 14px;
+    }
+  }
+}

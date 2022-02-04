@@ -1,0 +1,31 @@
+@import '@styles/mixins/media';
+
+.container {
+  margin-top: 24px;
+  position: relative;
+  display: flex;
+
+  .arrow {
+    display: none;
+  }
+
+  .swiperContainer {
+    width: 100vw;
+
+    > div > div {
+      flex-shrink: 1;
+      width: 100% !important;
+    }
+  }
+
+  @include media('desktop') {
+    width: 100%;
+    .swiperContainer {
+      width: 768px;
+    }
+    .arrow {
+      display: initial;
+      align-self: center;
+    }
+  }
+}

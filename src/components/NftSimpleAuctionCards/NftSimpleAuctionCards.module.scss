@@ -1,0 +1,72 @@
+@import '@styles/variables.scss';
+@import '@styles/mixins/pseudo.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $athens-grey;
+  border: 1px solid $athens-grey2;
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 174px;
+  max-width: 174px;
+
+  .imageWrapper {
+    min-height: 200px;
+  }
+
+  .avatarWrapper {
+    width: 40px;
+    border-radius: 50%;
+    margin-top: -28px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+
+  .cardName {
+    color: $dark;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .currentBid {
+    width: fit-content;
+    margin-inline: auto;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: $dark;
+    position: relative;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    text-align: center;
+
+    &::before {
+      @include pseudo();
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $medium-purple;
+      left: -20px;
+    }
+  }
+
+  .reservePrice {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: $dark;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    text-align: center;
+  }
+
+  width: 100%;
+  picture > img {
+    width: 158px;
+    width: 100%;
+    height: auto;
+  }
+}

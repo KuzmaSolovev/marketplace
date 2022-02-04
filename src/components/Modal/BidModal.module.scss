@@ -1,0 +1,129 @@
+@import '@styles/variables.scss';
+@import '@styles/mixins/pseudo.scss';
+
+.container {
+  height: auto !important;
+  border-radius: 8px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  width: 120%;
+  background-color: $athens-grey2;
+  padding: 8px;
+
+  > .currentBid {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    color: $dark;
+    position: relative;
+    margin-top: 12px;
+    margin-bottom: 2px;
+
+    &::before {
+      @include pseudo();
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $medium-purple;
+      left: -20px;
+    }
+  }
+
+  > div {
+    display: flex;
+    padding: 8px 12px;
+    > span:last-of-type {
+      font-weight: 700;
+      margin-left: auto;
+    }
+  }
+}
+
+.notificationText {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: justify;
+  color: $gray;
+}
+
+.actionButtons {
+  display: flex;
+  width: 100%;
+  button {
+    padding: 12px 20px;
+    &:first-child {
+      margin-right: 8px;
+    }
+  }
+
+  .cancelAction {
+    background-color: transparent;
+    color: $dark;
+    font-weight: 700;
+    border: 1px solid #021437;
+    width: 100%;
+  }
+
+  .placeBidAction {
+    width: 100%;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: $dark;
+  border: 1px solid #eeeff1;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 48px;
+
+  > input {
+    outline: 0;
+    border: none;
+    border-color: $dark;
+    padding-left: 4px;
+    font-size: 16px;
+    text-align: center;
+    background-color: transparent;
+    width: 80%;
+    margin-right: 8px;
+  }
+
+  > span {
+    color: $gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 48px;
+    border-left: 1px solid #eeeff1;
+  }
+}
+
+.currentBalance {
+  color: $gray;
+  display: grid;
+  gap: 8px;
+  > span {
+    color: $dark;
+  }
+}
+
+.processingTransaction {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > div {
+    margin-top: 0;
+  }
+}

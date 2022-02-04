@@ -1,0 +1,48 @@
+@import '@styles/variables.scss';
+
+@mixin fluid-font($min-width, $max-width, $min-font-size, $max-font-size) {
+  $unit1: unit(map-get($breakpoints, $min-width));
+  $unit2: unit(map-get($breakpoints, $max-width));
+  $unit3: unit($min-font-size);
+  $unit4: unit($max-font-size);
+  $min-breakpoint: map-get(
+    $map: $breakpoints,
+    $key: $min-width,
+  );
+  $max-breakpoint: map-get(
+    $map: $breakpoints,
+    $key: $min-width,
+  );
+  @if $unit1 == $unit2 and $unit1 == $unit3 and $unit1 == $unit4 {
+    & {
+      font-size: $min-font-size;
+      line-height: $min-font-size * 1.618;
+      @media screen and (min-width: $min-breakpoint) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            (
+              (100vw - #{$min-breakpoint}) / #{strip-unit(
+                  $max-breakpoint - $min-breakpoint
+                )}
+            )
+        );
+        line-height: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            1.618 *
+            (
+              (100vw - #{$min-breakpoint}) / #{strip-unit(
+                  $max-breakpoint - $min-breakpoint
+                )}
+            )
+        );
+      }
+      @media screen and (min-width: $max-breakpoint) {
+        font-size: $max-font-size;
+        line-height: $max-font-size * 1.618;
+      }
+    }
+  }
+}
+
+//usage
+//@include fluid-font(320px, 1024px, 24px, 64px);

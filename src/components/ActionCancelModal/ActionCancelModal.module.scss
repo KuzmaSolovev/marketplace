@@ -1,0 +1,15 @@
+@import '@styles/variables.scss';
+@import '@styles/mixins/pseudo.scss';
+
+.container {
+  height: auto !important;
+  border-radius: 8px;
+
+  .imgWrapper {
+    object-fit: contain;
+  }
+
+  .cancelButton {
+    background-color: $razzmatazz;
+  }
+}

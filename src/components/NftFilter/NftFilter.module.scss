@@ -1,0 +1,121 @@
+@import '@styles/variables.scss';
+@import '@styles/mixins/media.scss';
+@import '@styles/mixins/input-label.scss';
+
+//--------------------Mobile Filter--------------------------------
+.filterWrapper {
+  width: 272px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $athens-grey2;
+  border-radius: 8px;
+  background-color: $athens-grey;
+  margin-bottom: 24px;
+  position: absolute;
+  z-index: 5;
+
+  .collapseWrapper {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+
+    .collapsibleTitle {
+      align-self: center;
+      color: $dark;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 12px;
+    }
+
+    .collapseArrow {
+      transition: transform 0.2s linear;
+    }
+
+    .rotateArrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  .formWrapperClosed {
+    overflow: hidden;
+    height: auto;
+    max-height: 0px;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .formWrapperOpen {
+    max-height: 550px;
+  }
+
+  .formSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline: 24px;
+
+    &:last-of-type {
+      padding-bottom: 16px;
+    }
+
+    &:not(:last-of-type) {
+      margin: 16px 0 32px;
+    }
+
+    & > h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .ulGrid {
+      @include check-box-container;
+    }
+  }
+}
+
+.filterWrapperShadow {
+  box-shadow: 0px 4px 32px rgba(2, 20, 55, 0.25);
+}
+
+//------------Desktop Filter------------------------------------------
+
+@include media('tablet', 'min') {
+  .filterWrapper {
+    flex-basis: 29%;
+    align-self: flex-start;
+    margin-bottom: 0;
+    position: static;
+    background-color: transparent;
+    border: none;
+    margin-right: 24px;
+
+    .collapseWrapper {
+      display: none;
+    }
+
+    .formWrapperClosed {
+      max-height: unset;
+    }
+
+    .formSection {
+      padding: 16px;
+      background: $athens-grey;
+
+      border: 1px solid $athens-grey2;
+      box-sizing: border-box;
+      border-radius: 8px;
+
+      &:not(:last-of-type) {
+        margin: 0 0 24px 0;
+      }
+    }
+  }
+
+  .filterWrapperShadow {
+    box-shadow: none;
+  }
+}

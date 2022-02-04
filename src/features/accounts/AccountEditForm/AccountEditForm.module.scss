@@ -1,0 +1,23 @@
+@import '@styles/mixins/media.scss';
+
+.editForm {
+  flex-basis: 70%;
+  margin-right: 68px;
+
+  .btnForm {
+    width: 156px;
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+@include media('tablet', 'max') {
+  .editForm {
+    width: 79%;
+    margin: 60px auto 0 auto;
+
+    .btnForm {
+      width: 100%;
+    }
+  }
+}

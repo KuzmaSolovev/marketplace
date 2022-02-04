@@ -1,0 +1,13 @@
+@keyframes pulse {
+  0% {
+    background-color: $athens-grey;
+  }
+
+  50% {
+    background-color: $background-color-mercury;
+  }
+
+  100% {
+    background-color: $athens-grey2;
+  }
+}

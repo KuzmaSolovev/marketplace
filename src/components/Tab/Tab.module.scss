@@ -1,0 +1,32 @@
+@import '@styles/variables.scss';
+
+.button {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 32px;
+}
+
+.buttonActive {
+  color: #fff;
+  background-color: $medium-purple;
+  border: none;
+}
+
+.buttonNotActive {
+  border: 1px solid $medium-purple;
+  color: $dark;
+  background-color: transparent;
+}
+
+.buttonAuction {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.buttonSale {
+  border-radius: 0px 0px 0px 0px;
+}
+
+.buttonOwned {
+  border-radius: 0px 8px 8px 0px;
+}

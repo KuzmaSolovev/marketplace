@@ -1,0 +1,54 @@
+@import '@styles/variables.scss';
+
+.cardDescription {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  color: $dark;
+
+  .nftName {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.cardBid {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .nftPrice {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    color: $dark;
+    display: flex;
+    gap: 4px;
+  }
+
+  .bidBtn {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    color: $medium-purple;
+  }
+
+  .likeCount {
+    font-size: 12px;
+    display: flex;
+    gap: 4px;
+  }
+}
+
+.btnSale {
+  grid-column: 1/-1;
+  display: flex;
+
+  .btnStyle {
+    background-color: $medium-purple;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px;
+  }
+}

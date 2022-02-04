@@ -1,0 +1,43 @@
+@import '@styles/variables.scss';
+
+.accountHeaderGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 14px;
+
+  .backgroundImg {
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 40%;
+  }
+
+  .avatarWrapper {
+    margin-top: -62px;
+    width: 96px;
+    justify-self: center;
+    position: relative;
+
+    .avatarImg {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .verifiedBadge {
+      position: absolute;
+      top: 80px;
+      left: 67px;
+    }
+  }
+
+  .accountName {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: $dark;
+  }
+
+  .accountAddress {
+    margin: auto;
+  }
+}

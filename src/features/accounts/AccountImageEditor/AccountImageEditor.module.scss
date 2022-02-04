@@ -1,0 +1,58 @@
+@import '@styles/variables.scss';
+@import '@styles/mixins/media.scss';
+
+.editorContainer {
+  display: grid;
+  gap: 32px;
+  align-self: center;
+  flex-basis: 30%;
+  align-self: flex-start;
+
+  .imageEditor {
+    display: grid;
+    text-align: center;
+    gap: 16px;
+    justify-items: flex-start;
+
+    .imageTitle {
+      font-size: 14px;
+      font-weight: 600;
+      color: $dark;
+    }
+
+    .imageWrapper {
+      border-radius: 50%;
+      overflow: hidden;
+      object-fit: cover;
+    }
+
+    .bannerWrapper {
+      border-radius: 8px;
+      overflow: hidden;
+      object-fit: cover;
+    }
+
+    .btnUpload {
+      width: 134px;
+      background-color: $medium-purple;
+      padding: 12px 16px;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      display: block;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      color: white;
+    }
+  }
+
+  @include media('tablet', 'max') {
+    align-self: center;
+
+    .imageEditor {
+      justify-items: center;
+    }
+  }
+}

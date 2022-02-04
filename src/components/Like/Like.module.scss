@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+
+  & button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+
+  &.liked {
+    color: #eb6b63;
+  }
+}

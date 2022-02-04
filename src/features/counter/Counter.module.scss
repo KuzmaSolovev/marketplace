@@ -1,0 +1,64 @@
+@import '@styles/variables.scss';
+@import '@styles/mixins/media.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  color: $gray;
+  padding-left: 12px;
+
+  .text {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+
+    .time {
+      color: $dark;
+      font-size: clamp(14px, 1.8vw, 18px);
+      line-height: 20px;
+      font-weight: 600;
+      display: grid;
+      justify-items: center;
+
+      & > span:first-of-type {
+        font-weight: 600;
+      }
+      & > span:last-of-type {
+        font-size: 12px;
+        line-height: 16px;
+        color: $gray;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.short {
+  & .countdown {
+    gap: 8px;
+    .time {
+      grid-template-columns: max-content min-content;
+      gap: 4px;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 600;
+      justify-content: center;
+
+      & > span:last-of-type {
+        color: $dark;
+      }
+    }
+  }
+}

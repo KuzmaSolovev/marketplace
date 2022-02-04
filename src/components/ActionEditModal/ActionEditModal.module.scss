@@ -1,0 +1,117 @@
+@import '@styles/variables.scss';
+@import '@styles/mixins/pseudo.scss';
+
+.container {
+  height: auto !important;
+  border-radius: 8px;
+
+  .imgWrapper {
+    object-fit: contain;
+  }
+
+  .priceWrapper {
+    background-color: $athens-grey2;
+    width: 120%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+
+    .title {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 600;
+      color: $gray;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $dark;
+    }
+  }
+
+  .actionForm {
+    display: grid;
+    gap: 16px;
+
+    .auctionWrapper {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 100%;
+
+      .title {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 600;
+        color: $dark;
+        margin-bottom: 16px;
+      }
+      .auctionEndTimeList {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+
+        .selectList {
+          display: flex;
+          gap: 2px;
+          align-items: center;
+
+          .selectListSpan {
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .inputWrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      color: $dark;
+      border: 1px solid #eeeff1;
+      box-sizing: border-box;
+      border-radius: 4px;
+      height: 48px;
+
+      > input {
+        outline: 0;
+        border: none;
+        border-color: $dark;
+        padding-left: 4px;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 600;
+        text-align: center;
+        background-color: transparent;
+        width: 80%;
+      }
+
+      > span {
+        color: $gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 48px;
+        border-left: 1px solid #eeeff1;
+      }
+    }
+
+    .actionButtons {
+      width: 100%;
+      display: flex;
+
+      .cancelButton {
+        color: $dark;
+        background-color: transparent;
+        border: 1px solid $dark;
+        margin-right: 8px;
+      }
+    }
+  }
+}

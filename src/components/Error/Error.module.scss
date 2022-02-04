@@ -1,0 +1,99 @@
+@import '@styles/variables.scss';
+
+.wrapper {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .container {
+    display: grid;
+    flex-direction: column;
+    gap: 16px;
+
+    .logo {
+      width: clamp(274px, 80vw, 411px);
+      height: clamp(80px, 24vw, 120px);
+    }
+
+    .title {
+      font-size: clamp(100px, 25vw, 144px);
+      line-height: clamp(100px, 25vw, 120px);
+      font-weight: 700;
+      color: #000000;
+      z-index: 6;
+    }
+
+    .description {
+      font-size: clamp(14px, 6vw, 26px);
+      margin-top: 24px;
+      font-weight: 700;
+      z-index: 6;
+    }
+  }
+  @media only screen and (max-height: 500px) and (orientation: landscape) {
+    .container {
+      padding-top: 28px;
+      gap: 10px;
+      .logo {
+        width: 240px;
+        height: 80px;
+      }
+
+      .title {
+        font-size: 70px;
+        line-height: 70px;
+      }
+
+      .description {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .moon {
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .grassImage {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100.1%;
+  }
+
+  .kitsumonsWrapper {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    align-items: flex-end;
+    justify-content: center;
+
+    > :not(:last-of-type) {
+      margin-right: 37px;
+    }
+  }
+
+  .button {
+    margin-top: 24px;
+    background-color: #000000;
+    padding: 8px 24px;
+    width: fit-content;
+    border-radius: 0;
+    font-size: 14px;
+    line-height: 24px;
+    z-index: 10;
+  }
+}

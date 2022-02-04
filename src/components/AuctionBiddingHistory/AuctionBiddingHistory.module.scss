@@ -1,0 +1,64 @@
+@import '@styles/variables.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-top: 16px;
+  > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $athens-grey;
+    border-radius: 8px;
+    padding: 16px;
+
+    .collapseWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .collapseArrow {
+    background-color: transparent;
+    transition: transform 0.2s linear;
+    cursor: pointer;
+  }
+
+  .rotateArrow {
+    transform: rotate(180deg);
+  }
+
+  > span {
+    font-size: 14px;
+    line-height: 16px;
+    color: $gray;
+    margin-bottom: 8px;
+  }
+}
+
+.contentWrapperClosed {
+  width: 100%;
+  padding: 0 16px 16px 16px;
+  overflow: hidden;
+  height: auto;
+  max-height: 0px;
+  transition: max-height 0.2s ease-out;
+  background-color: $athens-grey;
+  border-radius: 8px;
+  margin-top: -16px;
+
+  .answer {
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 16px 24px;
+    opacity: 0.8;
+  }
+}
+
+.contentWrapperOpen {
+  max-height: 250px;
+}

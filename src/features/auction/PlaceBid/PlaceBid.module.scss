@@ -1,0 +1,102 @@
+@import '@styles/variables.scss';
+@import '@styles/mixins/media.scss';
+@import '@styles/mixins/pseudo.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $athens-grey;
+  border: 1px solid $athens-grey2;
+  border-radius: 8px;
+  padding: 16px 16px 32px;
+  margin-top: 16px;
+
+  .auctionStatus {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 32px;
+  }
+
+  .deadline {
+    padding-top: 24px;
+  }
+
+  .bidStatus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: clamp(12px, 2vw, 48px);
+    border-bottom: 1px solid $gray;
+    padding-bottom: 24px;
+
+    .currentBid {
+      width: fit-content;
+      align-self: center;
+      font-size: clamp(14px, 1.8vw, 18px);
+      line-height: 20px;
+      font-weight: 700;
+      color: $dark;
+      position: relative;
+      margin-top: 12px;
+      margin-bottom: 2px;
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      gap: 4px;
+
+      &::before {
+        @include pseudo();
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $medium-purple;
+        position: relative;
+        align-self: center;
+      }
+    }
+
+    .title {
+      font-size: 14px;
+      line-height: 16px;
+      color: $gray;
+      font-weight: 600;
+    }
+
+    .reservedPrice {
+      align-self: center;
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 700;
+      color: $dark;
+      position: relative;
+      margin-top: 12px;
+    }
+  }
+
+  .endAuction {
+    background-color: red;
+  }
+
+  @include media('tablet') {
+    .auctionStatus {
+      flex-direction: row;
+      justify-content: space-around;
+      text-align: left;
+    }
+
+    .bidStatus {
+      border-bottom: none;
+      border-right: 1px solid $gray;
+    }
+
+    .bidStatus,
+    .deadline {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

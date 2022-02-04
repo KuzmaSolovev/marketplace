@@ -1,0 +1,73 @@
+@import '@styles/variables.scss';
+
+.addressWrapper {
+  background-color: $athens-grey2;
+  width: 100px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  :hover {
+    cursor: pointer;
+  }
+
+  .addressStyles {
+    width: 100%;
+    display: flex;
+    padding: 8px;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+
+    .addressFlex {
+      display: flex;
+      flex-direction: row;
+
+      .addressSpan {
+        width: 100%;
+        opacity: 0.8;
+        font-size: 12px;
+        font-weight: 600;
+        color: $dark;
+        text-align: center;
+        line-height: 24px;
+        margin-right: 1.6px;
+      }
+
+      .copyIcon {
+        display: flex;
+        align-items: center;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .hiddenAddressWrapper {
+    overflow: hidden;
+
+    .addressHidden {
+      width: max-content;
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .addressCopiedWrapper {
+    padding: 8;
+
+    .addressCopiedSpan {
+      font-size: 14px;
+      font-weight: 600;
+      color: $dark;
+      text-align: center;
+      line-height: 24px;
+      margin-right: 1.6px;
+    }
+  }
+}

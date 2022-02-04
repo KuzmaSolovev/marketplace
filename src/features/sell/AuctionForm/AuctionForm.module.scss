@@ -1,0 +1,113 @@
+@import '@styles/variables.scss';
+
+.form {
+  display: grid;
+  width: 100%;
+  margin-top: 16px;
+  gap: 16px;
+
+  > div {
+    color: $gray;
+    background-color: $athens-grey;
+    border-radius: 8px;
+    padding: 16px;
+    font-weight: 600;
+  }
+
+  .listSelection {
+    display: grid;
+    gap: 8px;
+  }
+
+  .radioButtons {
+    display: flex;
+    font-size: 12px;
+    line-height: 16px;
+
+    > :first-of-type {
+      margin-right: 24px;
+    }
+
+    color: $dark;
+    > li {
+      display: flex;
+      align-items: center;
+      label {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .auctionEndTime {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .auctionEndTimeList {
+      display: grid;
+      grid-template-columns: max-content max-content;
+      gap: 24px;
+
+      .selectList {
+        display: flex;
+        align-items: center;
+
+        > :first-child {
+          margin-right: 2px;
+        }
+
+        .selectListSpan {
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .inputWrapper {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: $dark;
+    border: 1px solid #eeeff1;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 48px;
+
+    > input {
+      outline: 0;
+      border: none;
+      border-color: $dark;
+      padding-left: 4px;
+      font-size: 16px;
+      text-align: center;
+      background-color: transparent;
+      width: 80%;
+    }
+
+    > span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      height: 48px;
+      border-left: 1px solid #eeeff1;
+    }
+  }
+
+  .pricing {
+    width: 100%;
+    display: grid;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .error {
+    color: red;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}

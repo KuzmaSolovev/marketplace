@@ -1,0 +1,89 @@
+@import '@styles/variables.scss';
+
+.cardWrapper {
+  position: relative;
+  background-color: $athens-grey;
+  border: 1px solid $athens-grey2;
+  border-radius: 16px;
+  padding: 26px 14px 14px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 8px;
+
+  .actionCardMenu {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .cardAvatar {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: flex-start;
+    align-self: flex-start;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .cardImg {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-self: center;
+    min-height: 220px;
+
+    & img {
+      max-width: 140px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .cardGeneration {
+    position: relative;
+    top: 6px;
+    background-color: $razzmatazz;
+    border-radius: 16px;
+    padding: 4px 12px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    grid-column: 2/3;
+    grid-row: 1/1;
+    align-self: flex-start;
+  }
+
+  .cardDescription {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $dark;
+
+    .nftName {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .likeCount {
+      font-size: 12px;
+      display: flex;
+    }
+  }
+
+  .nftReservedPrice {
+    grid-column: 1/-1;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $dark;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    > span:last-of-type {
+      font-weight: 700;
+    }
+  }
+}

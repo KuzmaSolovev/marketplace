@@ -1,0 +1,121 @@
+@import '@styles/variables.scss';
+@import '@styles/mixins/fluid-font.scss';
+
+.container {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  background-color: $athens-grey;
+  border: 1px solid $athens-grey2;
+  border-radius: 8px;
+  padding: 16px;
+
+  .creator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .creatorDetails {
+    display: flex;
+
+    .creatorAvatar {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 8px;
+
+      > span {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 12ch;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: clamp(4px, 3vw, 18px);
+
+    > :not(:last-child) {
+      margin-right: clamp(4px, 3vw, 18px);
+    }
+
+    & picture {
+      margin-left: 4px;
+    }
+  }
+
+  .tokenWatchlist {
+    display: flex;
+
+    > div {
+      min-width: 70px;
+      background-color: $athens-grey2;
+      padding: 4px 12px;
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $dark;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+
+      > :first-child {
+        margin-right: 8px;
+      }
+
+      &:first-of-type {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .tokenDetails {
+    a {
+      display: block;
+      width: max-content;
+    }
+    & h1 {
+      @include fluid-font('mobile', 'desktop', 18px, 24px);
+      line-height: 24px !important;
+      margin-bottom: 16px;
+    }
+
+    .tokenStatus {
+      display: flex;
+      justify-content: space-between;
+      flex: 1 0 50%;
+      & > span {
+        font-size: 12px;
+        line-height: 16px;
+        border-radius: 16px;
+        text-align: center;
+        width: 45%;
+        color: $athens-grey;
+        font-weight: 600;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-inline: clamp(24px, 1vw, 72px);
+
+        &:first-of-type {
+          background-color: $razzmatazz;
+        }
+        &:last-of-type {
+          background-color: $gray;
+        }
+      }
+    }
+  }
+}

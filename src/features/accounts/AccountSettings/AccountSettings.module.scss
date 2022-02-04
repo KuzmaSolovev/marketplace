@@ -1,0 +1,35 @@
+@import '@styles/variables.scss';
+@import '@styles/mixins/media.scss';
+
+.loadingWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $dark;
+  text-align: center;
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 32px;
+  max-width: 725px;
+  margin-top: 100px;
+  margin: 60px auto;
+
+  @include media('tablet', 'max') {
+    margin-top: 60px;
+    flex-direction: column-reverse;
+  }
+}

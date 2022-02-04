@@ -1,0 +1,3 @@
+export default {
+  CACHED_CONNECTOR_ID_KEY: 'CACHED_CONNECTOR_ID',
+};

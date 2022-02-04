@@ -1,0 +1,22 @@
+@import '@styles/mixins/fieldset.scss';
+
+.fieldset {
+  @include fieldset;
+}
+
+.labelWrapper {
+  display: flex;
+  margin-left: 10px;
+
+  > :nth-last-child(2) {
+    margin-right: 8px;
+  }
+
+  & > label {
+    font-size: 14px;
+    justify-self: center;
+    line-height: 16px;
+    color: $dark;
+    font-weight: 600;
+  }
+}

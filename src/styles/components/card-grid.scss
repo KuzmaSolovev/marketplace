@@ -1,0 +1,40 @@
+@import '@styles/mixins/media.scss';
+
+.nft-gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 272px;
+  justify-content: center;
+  align-self: center;
+  column-gap: 24px;
+  row-gap: 24px;
+  justify-self: center;
+
+  @include media('mobile', 'min') {
+    max-width: 600px;
+    grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+  }
+
+  @include media('tablet', 'min') {
+    max-width: unset;
+    grid-template-columns: repeat(auto-fill, minmax(212px, 1fr));
+    row-gap: 48px;
+  }
+}
+
+.explore-grid {
+  margin-top: 74px;
+}
+
+@include media('tablet', 'min') {
+  .explore-grid {
+    flex-basis: 75.5%;
+    margin-top: 0;
+  }
+}
+
+@include media('desktop', 'min') {
+  .explore-grid {
+    flex-basis: unset;
+  }
+}

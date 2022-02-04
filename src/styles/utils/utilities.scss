@@ -1,0 +1,24 @@
+@import '@styles/variables';
+@import '@styles/mixins/media';
+
+@include media('tablet', 'max') {
+  .mobile-hide {
+    display: none !important;
+  }
+
+  .mobile-full-width {
+    width: 100%;
+  }
+}
+
+@include media('tablet', 'min') {
+  .tablet-hide {
+    display: none;
+  }
+}
+
+@include media('desktop', 'min') {
+  .desktop-hide {
+    display: none;
+  }
+}

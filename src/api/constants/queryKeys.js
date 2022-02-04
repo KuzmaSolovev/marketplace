@@ -1,0 +1,11 @@
+export const PAGED_LAST_CREATED_AUCTIONS = 'paged-last-created-auctions';
+export const PAGED_LATEST_ASKS = 'paged-latest-asks';
+export const LAST_CREATED_AUCTIONS = 'last-created-auctions';
+export const LATEST_ASKS = 'latest-asks';
+export const LATEST_ASK_BY_TOKEN_ID = 'latest-ask-by-token-id';
+export const ACCOUNT_BALANCE = 'account-balance';
+export const LATEST_AUCTION_BIDS = 'latest-auction-bids';
+export const LATEST_AUCTION_EVENT = 'latest-auction-event';
+export const AUCTION_PAGE_COUNT = 'auction-page-count';
+export const ASKS_PAGE_COUNT = 'asks-page-count';
+export const OWNED_NFTS = 'owned_nfts';

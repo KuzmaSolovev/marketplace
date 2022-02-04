@@ -1,0 +1,11 @@
+@import '@styles/mixins/media.scss';
+
+.nftListFlex {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 32px;
+
+  @include media('tablet') {
+    gap: 16px;
+  }
+}

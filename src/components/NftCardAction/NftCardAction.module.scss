@@ -1,0 +1,13 @@
+@import '@styles/variables.scss';
+
+.btnSale {
+  grid-column: 1/-1;
+  display: flex;
+
+  .btnStyle {
+    background-color: $medium-purple;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px;
+  }
+}

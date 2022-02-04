@@ -1,0 +1,12 @@
+@import '@styles/mixins/media.scss';
+
+.exploreSection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 120px;
+
+  @include media('tablet', 'min') {
+    flex-direction: row;
+  }
+}

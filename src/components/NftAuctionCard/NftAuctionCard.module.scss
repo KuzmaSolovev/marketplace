@@ -1,0 +1,52 @@
+@import '@styles/mixins/media';
+
+.container {
+  position: relative;
+  width: 80%;
+  text-align: center;
+  .auctionImage {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+  }
+
+  .vector {
+    position: absolute;
+    right: 40px;
+    top: -30px;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    top: -35px;
+  }
+
+  & > .leftArrow {
+    position: absolute;
+    left: -20px;
+    top: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & > .rightArrow {
+    position: absolute;
+    right: -20px;
+    top: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include media('tablet') {
+    width: 40%;
+    margin-right: 12px;
+
+    & > .leftArrow,
+    .rightArrow,
+    .menu {
+      display: none;
+    }
+  }
+}

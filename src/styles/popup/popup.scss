@@ -1,0 +1,61 @@
+@import '@styles/variables.scss';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 272px;
+    background: white;
+    padding: 24px;
+    text-align: center;
+    align-items: center;
+
+    > :not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    .containerTitle {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+      color: $burnt-sienna;
+    }
+
+    .networkActionButtons {
+      display: flex;
+      flex-direction: column;
+      > button {
+        margin: 4px auto;
+      }
+    }
+
+    .containerText {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 500;
+      color: $dark;
+    }
+
+    .buttonDisconnect {
+      width: 120px;
+    }
+
+    .buttonSwitchNetwork {
+      width: 100%;
+      background-color: $dark;
+    }
+  }
+}
